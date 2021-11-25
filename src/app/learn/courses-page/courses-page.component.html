@@ -1,0 +1,21 @@
+<header>
+  <!-- <img style="width: 50%" src="assets/MeditatingDoodle.svg"> -->
+  <div class="mat-display-2">Courses list</div>
+  <div class="mat-headline">Create>blockchain_dapps</div>
+</header>
+
+<div class="grid">
+  <mat-card class="grid-anim" *ngFor="let course of coursesObservable | async" [routerLink]="course.playlistId">
+    <img mat-card-image [src]="course.image">
+    <mat-card-header>
+      <div mat-card-avatar><mat-icon>school</mat-icon></div>
+      <mat-card-title>{{ course.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{course.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>learn</button>
+    </mat-card-actions>
+  </mat-card>
+<div>

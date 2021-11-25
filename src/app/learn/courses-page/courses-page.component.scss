@@ -1,0 +1,15 @@
+.grid {
+  margin: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  .grid-anim {
+    transition: transform 500ms ease;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+button {
+  margin: 0 auto !important;
+}
