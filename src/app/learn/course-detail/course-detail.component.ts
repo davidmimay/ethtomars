@@ -20,9 +20,8 @@ export class CourseDetailComponent {
 
   videos: any[] = [];
 
-  private youtubeUrl:string = "https://www.googleapis.com/youtube/v3";
-  private apikey:string = environment.youtube.apikey;
-  private nextpage:string = environment.youtube.nextpage;
+  private youtubeUrl:string = 'https://www.googleapis.com/youtube/v3';
+  private apikey:string = 'AIzaSyCNDphnCDsZaZT4GQAMIdH13KaoaXTfyHknpm';
 
   constructor(
     private route: ActivatedRoute,

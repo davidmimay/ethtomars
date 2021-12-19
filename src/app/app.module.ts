@@ -13,6 +13,7 @@ import { UserModule } from './user/user.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireFunctionsModule, REGION } from '@angular/fire/functions';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -25,12 +26,15 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     BrowserAnimationsModule,
     SharedModule,
     UserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AngularFireFunctionsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
-  providers: [],
+  providers: [
+    { provide: REGION, useValue: 'us-central1' }, //TO-DO Change to your functions location
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

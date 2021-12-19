@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: '', component: CoursesPageComponent },
   { path: ':id', component: CourseDetailComponent },
   { path: ':id/:id', component: VideoDetailComponent },
-
 ];
 
 @NgModule({

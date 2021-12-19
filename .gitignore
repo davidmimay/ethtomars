@@ -7,16 +7,9 @@
 .editorconfig
 .firebaserc
 *.log
-/src/env.ts
 /.firebase
-/environments
 environment.prod.ts
 environment.ts
-./src/environments/
-/src/environments/
-.env
-.environment.prod.ts
-.environment.ts
 /e2e
 
 # Others

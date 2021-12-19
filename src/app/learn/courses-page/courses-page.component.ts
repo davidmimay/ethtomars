@@ -3,7 +3,6 @@ import { Course } from './course.model';
 import { Observable } from 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 
-
 @Component({
   selector: 'app-courses-page',
   templateUrl: './courses-page.component.html',
@@ -15,8 +14,8 @@ export class CoursesPageComponent implements OnInit {
     private db: AngularFirestore,
   ) {}
 
-    coursesCollection: AngularFirestoreCollection<Course>;
-    coursesObservable: Observable<Course[]>;
+  coursesCollection: AngularFirestoreCollection<Course>;
+  coursesObservable: Observable<Course[]>;
 
   ngOnInit() {
     this.coursesCollection = this.db.collection('courses');

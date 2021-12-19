@@ -18,7 +18,9 @@
     "dev:ssr": "ng run ethtomars:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
     "build:ssr": "ng build --prod && ng run ethtomars:server:production",
-    "prerender": "ng run ethtomars:prerender"
+    "prerender": "ng run ethtomars:prerender",
+    "firebase:login": "firebase login --no-localhost",
+    "firebase:deploy": "firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
@@ -65,7 +67,7 @@
     "@types/express": "^4.17.0",
     "@types/jasmine": "~3.5.3",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.20.37",
     "@types/stripe": "^8.0.72",
     "@types/stripe-checkout": "^1.0.3",
     "@types/stripe-v3": "^3.1.23",

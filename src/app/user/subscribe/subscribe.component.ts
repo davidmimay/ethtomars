@@ -17,7 +17,7 @@ import { SubscribedService } from './../../services/subscribed.service';
   styleUrls: ['./subscribe.component.scss']
 })
 export class SubscribeComponent implements OnInit {
-
+  /*
   STRIPE_RESTRICTED_KEY = (environment.stripe.restrictedKey);
   firebaseConfig = (environment.firebase);
   functionLocation = (environment.location);
@@ -35,11 +35,11 @@ export class SubscribeComponent implements OnInit {
     private afAuth: AngularFireAuth,
     public subscribedService: SubscribedService,
   ) {}
-
+*/
   ngOnInit(): void {}
 
   
-  
+  /*
   async sendToCheckout() {
     this.isloading = true // new spinner
   // async sendToCheckout(event) {
@@ -94,4 +94,5 @@ export class SubscribeComponent implements OnInit {
     const { data } = await functionRef({ returnUrl: window.location.origin });
     window.location.assign(data.url);
   }
+  */
 }
