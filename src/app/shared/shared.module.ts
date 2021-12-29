@@ -23,15 +23,18 @@ import {MatRadioModule} from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatBadgeModule} from '@angular/material/badge';
 
 // Components
 import { DeleteButtonComponent } from './delete-button/delete-button.component';
 import { ShellComponent } from './shell/shell.component';
 import { FooterComponent } from './footer/footer.component';
 
-
 const components = [
-  ShellComponent, DeleteButtonComponent, FooterComponent
+  ShellComponent,
+  DeleteButtonComponent,
+  FooterComponent,
 ];
 
 const modules = [
@@ -60,6 +63,8 @@ const modules = [
   FormsModule,
   MatChipsModule,
   MatDialogModule,
+  MatExpansionModule,
+  MatBadgeModule
 ];
 
 @NgModule({

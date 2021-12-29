@@ -1,25 +1,23 @@
 <main>
-  <div class="img-hero">
-    <img src="assets/hero.jpg">
-    <div class="img-text">
-      <div class="mat-display-2">CREATE YOUR DAPPS//</div>
+  <section style="background-image: url(assets/home-hero.jpg); background-repeat: no-repeat; background-size: 100%">
+    <div style="max-width: 500px; margin: 0 auto">
+      <p class="mat-display-2">Learn on us.</p>
+      <p class="mat-h2">Get instant access to a collection of courses</p>
+      <a mat-raised-button color="accent">Try now</a>
+      <p class="mat-caption">$2/month. Cancell anytime. Subscription auto-renews unless cancelled</p>
     </div>
-  </div>
-  <div style="text-align: right;" class="mat-h1">a powerful tool to learn how to create and deploy your own decentralized apps on ethereum blockchain</div>
-
-  <section>
-    <h1>Community</h1>
-    <h3>join the community of ethereum developers</h3>
-    <a mat-raised-button color="accent" style="margin-right: 10px" routerLink="/profile">upgrade</a>
   </section>
-
   
   <mat-tab-group style="background-color:grey" mat-align-tabs="center">
-    <mat-tab selectedIndex label="🎓 learn">
+    <mat-tab selectedIndex label="About eth>to_mars">
+      <div class="mat-display-1">Create your own dapps</div>
+      <div class="mat-h1" style="text-align: right;" >a powerful tool to learn how to create and deploy your own decentralized apps on ethereum blockchain</div>
+
       <mat-card>
         <img src="assets/feature01.png">
       </mat-card>
     </mat-tab>
+    <!--
     <mat-tab label="💻 create">
       <mat-card>
         <img src="assets/feature02.png">
@@ -30,11 +28,18 @@
         <img src="assets/feature03.png">
       </mat-card>
     </mat-tab>
+    -->
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <button mat-raised-button color="accent" style="margin-right: 10px" routerLink="/profile">Try now</button>
+      </ng-template>
+    </mat-tab>
   </mat-tab-group>
 
   <section>
-    <h1>AS FEATURED ON</h1>
-    <img class="featured" src="assets/featured.png">
+    <h1>Community</h1>
+    <h3>join the community of ethereum developers</h3>
+    <a mat-raised-button color="accent" style="margin-right: 10px" routerLink="/profile">upgrade</a>
   </section>
 
   <mat-divider></mat-divider>
@@ -75,10 +80,14 @@
     </div>  
   </section>
 
-  <section class="wave">
-    <div class="mat-display-1" style="text-align: left">SHOP</div>
-    <div class="mat-headline" style="text-align: left">just get the best products to remind you the future we are creating.</div>
-    <a mat-raised-button color="accent" style="margin-right: 10px;" href="https:///ashortfallofgravitas.etsy.com/" target="blank">shop</a>
+  <section>
+    <div class="mat-display-1">FAQs</div>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header><p class="mat-h1">What is eth>to_mars?</p></mat-expansion-panel-header>
+        <p>Ethtomars is a learning platform that lets you instantly play video lessons on the browser. Courses are ready wherever you have internet, without waiting for installs, downloads, or updates.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
   </section>
 
 </main>

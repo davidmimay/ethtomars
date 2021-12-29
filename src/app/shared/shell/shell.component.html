@@ -5,12 +5,9 @@
       [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-     
       <a mat-list-item routerLink="/" (click)="drawer.close()">home</a>
       <a mat-list-item routerLink="/learn" (click)="drawer.close()">💻 learn</a>
-      <a mat-list-item href="https:///ashortfallofgravitas.etsy.com/" target="_blank">✨ shop</a>
       <a mat-list-item routerLink="/profile" (click)="drawer.close()">🔑 profile</a>
-
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,7 +19,6 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
 
-
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="logo" routerLink="/"><strong>👾eth>to_mars</strong></span>
@@ -30,8 +26,7 @@
 
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button routerLink="/learn">💻 learn</a>
-        <a mat-button href="https:///ashortfallofgravitas.etsy.com/" target="_blank">✨ shop</a>
-        <a mat-button routerLink="/profile" *ngIf="!(afAuth.authState | async)">🔑 Login</a>
+        <a mat-button routerLink="/profile" *ngIf="!(afAuth.authState | async)">Login</a>
         <a mat-button routerLink="/profile" *ngIf="afAuth.authState | async as user" >
           <img class="avatar" [src]="user.photoURL || 'assets/UserDoodle.svg'">
           Profile

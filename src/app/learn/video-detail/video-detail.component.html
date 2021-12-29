@@ -2,3 +2,17 @@
   <youtube-player [videoId]="videoId" width="100%"></youtube-player>
   <button mat-raised-button routerLink=".."><mat-icon>keyboard_return</mat-icon></button>
 </mat-card>
+
+<mat-card>
+  <h1>Community</h1>
+  <mat-list>
+    <div mat-subheader>latest comments...</div>
+    <mat-list-item *ngFor="let comment of comments">
+      <img mat-list-icon src={{comment.authorProfileImageUrl}}>
+      <div mat-line>// {{comment.authorDisplayName}}</div>
+      <div mat-line>{{comment.textDisplay}}</div>
+      <!-- <p mat-line><mat-icon matBadge="{{comment.likeCount}}">thumb_up</mat-icon></p> -->
+    </mat-list-item>
+  </mat-list>
+  <a mat-raised-button [href]="videoUrl" target="_blank"><mat-icon>forum</mat-icon> comment</a>
+</mat-card>
